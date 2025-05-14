@@ -1,7 +1,7 @@
   <br>
   <div class="container contenedor-animes">
   <div class="row">
-    <p>La cantidad total de episodios es 2326 y el rating promedio es 8.03</p>
+    <p>Rating promedio de los animes es 7.99</p>
     <div *ngIf="selected">
       <app-anime-detail [animeDetail]="selectedBAnime"></app-anime-detail>
       <hr>
@@ -10,6 +10,7 @@
         <p>{{anime.name}}</p>
         <img src={{anime.img}}  alt="anime image" width=50px>
         <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
+        <p> # de temporadas = --completar --</p>
         <a href="#" (click)="onSelected(anime)">More information</a>
         <hr>
    </div>
