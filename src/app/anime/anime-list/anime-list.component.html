@@ -8,13 +8,21 @@
       <hr>
     </div>
     <div class="col-4" *ngFor="let anime of animes">
-        <p>{{anime.name}}</p>
-        <img src={{anime.img}}  alt="anime image" width=50px>
+
+      <div class="card p-2 mb-2 mt-2" style="width: 15rem; height: 33rem;">
+
+        
+        <img class="card-img-top" src={{anime.img}}  alt="anime image" width=50px>
+
+        <div class="card-body">
+        <h5 class="card-title">{{anime.name}}</h5>
         <p>⭐{{anime.Rating}} <b>Categories: </b>{{anime.categorie}}</p>
         <!-- COMPLETAR PARA INCLUIR LA CANTIDAD DE TEMPORADAS -->
         <p class="card-text"><b># seasons: </b>{{anime.seasons.length}}</p>
         <button type="button" class="btn btn-primary" routerLink="/animes/{{anime.id}}">Más información</button>
-        <hr>
+
+        </div>
+      </div>
    </div>
 
   </div>
